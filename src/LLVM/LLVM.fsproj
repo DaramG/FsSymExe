@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Target Name="BuildLLVM" BeforeTargets="BeforeBuild"
+          Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">
+    <Exec Command="make -C ./llvm" />
+  </Target>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="IR.fs" />
+    <Compile Include="Pp.fs" />
+    <Compile Include="HashTable.fs" />
+    <Compile Include="Core.fs" />
+    <Compile Include="Enums.fs" />
+    <Compile Include="TypeChecker.fs" />
+    <Compile Include="AST.fs" />
+    <Compile Include="Context.fs" />
+    <Compile Include="Reader.fs" />
+    <Compile Include="Visitor.fs" />
+    <None Include=".\llvm\libllvm.dll" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.fsproj" />
+  </ItemGroup>
+
+</Project>

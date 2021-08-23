@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="ICFG.fs" />
+    <Compile Include="ConstArgFold.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.fsproj" />
+    <ProjectReference Include="..\LLIR\LLIR.fsproj" />
+    <ProjectReference Include="..\SymExecutor\SymExecutor.fsproj" />
+  </ItemGroup>
+</Project>

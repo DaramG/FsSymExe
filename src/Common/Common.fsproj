@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Extends.fs" />
+    <Compile Include="Bytes.fs" />
+    <Compile Include="Logger.fs" />
+    <Compile Include="Utils.fs" />
+  </ItemGroup>
+
+</Project>

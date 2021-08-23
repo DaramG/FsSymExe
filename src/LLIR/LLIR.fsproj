@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="BitVector.fs" />
+    <Compile Include="IR.fs" />
+    <Compile Include="Pp.fs" />
+    <Compile Include="Builder.fs" />
+    <Compile Include="Core.fs" />
+    <Compile Include="CallGraph.fs" />
+    <Compile Include="Lift.fs" />
+    <Compile Include="Replacer.fs" />
+    <Compile Include="Z3.fs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.fsproj" />
+    <ProjectReference Include="..\LLVM\LLVM.fsproj" />
+    <PackageReference Include="Microsoft.Z3.x64" Version="4.8.7" />
+  </ItemGroup>
+
+
+</Project>
