@@ -1,5 +1,5 @@
 # FsSymExe
-`FsSymExe` is a static symbolic execution engine based on LLVM IR.
+`FsSymExe` is a static symbolic execution engine based on LLVM IR and written in [F#](https://fsharp.org).
 This is used as a configurable symbolic execution engine in our paper, "Precise and Scalable Detection of Use-after-Compacting-Garbage-Collection Bugs", which appeared in Usenix Security 2021.
 We expect that this can be leveraged to detect other kinds of vulnerabilities or write another analysis.
 
