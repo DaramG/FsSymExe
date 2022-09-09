@@ -21,7 +21,7 @@ We can use FsSymExe by setting configurations such as callbacks for specific ope
 You can find a list of configurations in [here](src/SymExecutor/State.fs).
 This is a part of the symbolic state definitions and represents user configurable settings.
 
-```
+```fsharp
 type State<'T> =
   ...
   UserState: 'T
@@ -37,7 +37,7 @@ type State<'T> =
 
 Here is an example code that installs user configurable settings.
 
-```
+```fsharp
 let check conf prog =
   let state =
     State.init prog GcState.empty
